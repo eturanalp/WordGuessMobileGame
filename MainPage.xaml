@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App5"
+             x:Class="App5.MainPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, WinPhone, Windows" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <Label x:Name="Guess_label" Text="Guess The Word:" FontSize="Medium" />
+        <Entry x:Name="phoneNumberText" Text="" FontSize="Small" TextColor="DimGray" TextChanged="OnGuess"/>
+        <Button x:Name="newGameWord" Text="New Game \ New Hint" Clicked="OnNewGameWord" />
+        <Button x:Name="check" Text="Check Guess" Clicked="OnCheckGuess" />
+        <Label x:Name="H1" Text="Hint1" />
+        <Label x:Name="H2" Text="Hint2" />
+        <Label x:Name="H3" Text="Hint3" />
+        <Label x:Name="H4" Text="Hint4" />
+        <Label x:Name="H5" Text="Hint5" />
+        <Label x:Name="Dash" Text="---------" IsVisible="False"/>
+        <Label x:Name="HCount" Text="Count" IsVisible="False" />
+        <Label x:Name="ExampleS1" Text="Example Sentence 1" />
+        <Label x:Name="ExampleS2" Text="Example Sentence 2" />
+        <Button x:Name="Level" Text="Set Level" Clicked="OnSetLevel" />
+        <!--<RatingBar android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"/>-->
+        <Slider x:Name="sfr" />
+    </StackLayout>
+
+</ContentPage>
